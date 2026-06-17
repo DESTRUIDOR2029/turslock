@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte - Turslok</title>
+    <link rel="icon" href="/srcprojeto/img/icone.png" type="image/x-icon">
+    <link rel="stylesheet" href="/srcprojeto/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg-gradient-to-br from-turslok4 via-gray-300 to-teal-200 min-h-screen">
+
+    <!-- Cabeçalho -->
+    <header class="bg-turslok1 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-5">
+            <h1 class="text-3xl font-bold">Central de Suporte</h1>
+            <p class="text-green-100 mt-1">
+                Estamos aqui para ajudar você.
+            </p>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container mx-auto px-6 py-10">
+
+        <!-- Busca -->
+        <section class="bg-white rounded-xl shadow-md p-8 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">
+                Como podemos ajudar?
+            </h2>
+
+            <div class="flex flex-col md:flex-row gap-4">
+                <input type="text" placeholder="Pesquisar dúvidas..."
+                    class="flex-1 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-600">
+
+                <button class="bg-turslok2 text-white px-6 py-3 rounded-lg hover:bg-turslok3 transition">
+                    Pesquisar
+                </button>
+            </div>
+        </section>
+
+        <!-- Categorias -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold mb-6">
+                Categorias
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+                    <i class="fas fa-user-circle text-4xl text-turslok3 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Conta</h3>
+                    <p class="text-gray-600">
+                        Ajuda com login, cadastro e recuperação de senha.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+                    <i class="fas fa-map-marked-alt text-4xl text-turslok3 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Turismo</h3>
+                    <p class="text-gray-600">
+                        Informações sobre propriedades e roteiros.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+                    <i class="fas fa-credit-card text-4xl text-turslok3 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Pagamentos</h3>
+                    <p class="text-gray-600">
+                        Dúvidas sobre cobranças e transações.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Perguntas Frequentes -->
+        <section class="bg-white rounded-xl shadow-md p-8 mb-10">
+            <h2 class="text-2xl font-bold mb-6">
+                Perguntas Frequentes
+            </h2>
+
+            <div class="space-y-4">
+
+                <details class="border rounded-lg p-4">
+                    <summary class="cursor-pointer font-semibold">
+                        Como criar uma conta?
+                    </summary>
+                    <p class="mt-3 text-gray-600">
+                        Clique em "Cadastrar" no topo da página e preencha seus dados.
+                    </p>
+                </details>
+
+                <details class="border rounded-lg p-4">
+                    <summary class="cursor-pointer font-semibold">
+                        Esqueci minha senha. O que fazer?
+                    </summary>
+                    <p class="mt-3 text-gray-600">
+                        Utilize a opção "Recuperar Senha" na tela de login.
+                    </p>
+                </details>
+
+                <details class="border rounded-lg p-4">
+                    <summary class="cursor-pointer font-semibold">
+                        Como entrar em contato com o suporte?
+                    </summary>
+                    <p class="mt-3 text-gray-600">
+                        Utilize o formulário abaixo ou envie um e-mail para nossa equipe.
+                    </p>
+                </details>
+
+            </div>
+        </section>
+
+        <!-- Formulário -->
+        <section class="bg-white rounded-xl shadow-md p-8">
+            <h2 class="text-2xl font-bold mb-6">
+                Enviar Solicitação
+            </h2>
+
+            <form class="space-y-4">
+
+                <div>
+                    <label class="block mb-2 font-medium">
+                        Nome
+                    </label>
+                    <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3">
+                </div>
+
+                <div>
+                    <label class="block mb-2 font-medium">
+                        E-mail
+                    </label>
+                    <input type="email" class="w-full border border-gray-300 rounded-lg px-4 py-3">
+                </div>
+
+                <div>
+                    <label class="block mb-2 font-medium">
+                        Mensagem
+                    </label>
+                    <textarea rows="5" class="w-full border border-gray-300 rounded-lg px-4 py-3"></textarea>
+                </div>
+
+                <button type="submit" class="bg-turslok2 text-white px-8 py-3 rounded-lg hover:bg-turslok3 transition">
+                    Enviar Mensagem
+                </button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-turslok1 text-white mt-10">
+        <div class="container mx-auto px-6 py-6 text-center">
+            <p>&copy; 2026 Turslok - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

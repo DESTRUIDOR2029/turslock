@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Turslok</title>
+    <link rel="stylesheet" href="/srcprojeto/css/output.css">
+    <link rel="icon" href="/srcprojeto/img/icone.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gradient-to-br from-turslok4 via-gray-300 to-teal-200 overflow-x-hidden ">
+    <header class="h-15 bg-turslok1 shadow-md ">
+
+        <div class="h-full px-6 flex items-center justify-between">
+
+            <!-- INÍCIO -->
+            <a href="/index.html/frente.html"
+                class="flex items-center gap-2 text-turslok5 hover:text-gray-400 transition-all">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
+
+            <!-- LOGO -->
+            <a href="/index.html/frente.html">
+                <img src="/srcprojeto/img/logo.png" alt="Turslok" class="h-10 object-contain">
+            </a>
+
+            <!-- Espaço para alinhamento -->
+            <div class="w-16"></div>
+
+        </div>
+    </header>
+    <!-- INPUTS -->
+    <input type="radio" name="tabs" id="perfil" hidden checked>
+    <input type="radio" name="tabs" id="config" hidden>
+    <input type="radio" name="tabs" id="seguranca" hidden>
+    <input type="radio" name="tabs" id="notificacoes" hidden>
+
+    <div class="container flex min-h-screen">
+
+        <!-- SIDEBAR -->
+        <aside class="w-24 bg-turslok1 flex flex-col items-center py-6 gap-4 shadow-2xl border-t border-white">
+            <!-- LOGO -->
+            <div
+                class="w-14 h-14 rounded-2xl bg-turslok2 flex items-center justify-center text-white font-bold text-2xl">
+                <a href=""><img src="/srcprojeto/img/icone.png" alt="" class="w-10"></a>
+            </div>
+
+            <div class="w-10 border-b border-turslok3"></div>
+
+            <!-- PERFIL -->
+            <label for="perfil"
+                class="btn-perfil w-14 h-14 rounded-2xl bg-turslok2 flex items-center justify-center text-white text-xl cursor-pointer hover:bg-turslok3 transition-all duration-300">
+                <i class="fa-solid fa-user"></i>
+            </label>
+
+            <!-- CONFIG -->
+            <label for="config"
+                class="btn-config w-14 h-14 rounded-2xl bg-turslok2 flex items-center justify-center text-white text-xl cursor-pointer hover:bg-turslok3 transition-all duration-300">
+                <i class="fa-solid fa-gear"></i>
+            </label>
+
+            <!-- SEGURANÇA -->
+            <label for="seguranca"
+                class="btn-seg w-14 h-14 rounded-2xl bg-turslok2 flex items-center justify-center text-white text-xl cursor-pointer hover:bg-turslok3 transition-all duration-300">
+                <i class="fa-solid fa-shield-halved"></i>
+            </label>
+
+            <!-- NOTIFICAÇÕES -->
+            <label for="notificacoes"
+                class="btn-not w-14 h-14 rounded-2xl bg-turslok2 flex items-center justify-center text-white text-xl cursor-pointer hover:bg-turslok3 transition-all duration-300">
+                <i class="fa-solid fa-bell"></i>
+            </label>
+
+        </aside>
+
+        <!-- CONTEÚDO -->
+        <main class="ml-0 md:ml-24 flex-1 flex justify-center p-4 md:p-8">
+            <div class="w-full max-w-6xl">
+
+                <!-- PERFIL -->
+                <section class="tab-content perfil-content">
+
+                    <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+
+                        <!-- CAPA -->
+                        <div class="h-56 bg-gradient-to-r from-turslok1 via-turborder-turslok3 to-turslok4"></div>
+
+                        <!-- CONTEÚDO -->
+                        <div class="p-8">
+
+                            <div class="flex flex-col lg:flex-row gap-8 -mt-24">
+
+                                <!-- FOTO -->
+                                <div class="relative">
+
+                                    <img src="/srcprojeto/img/vazio.png"
+                                        class="w-44 h-44 rounded-full border-4 border-turslok1 shadow-xl m-0 object-cover">
+
+                                    <div
+                                        class="absolute bottom-2 right-2 w-5 h-5 bg-turto-turslok4 rounded-full border-4 border-white">
+                                    </div>
+
+                                </div>
+
+                                <!-- INFO -->
+                                <div class="flex-1">
+
+                                    <h1 class="text-4xl font-bold text-black">
+                                        Nome Sobrenome
+                                    </h1>
+
+                                    <p class="text-black font-semibold md:mt-0 mt-4">
+                                        Guia de Turismo Rural
+                                    </p>
+
+                                    <p class="text-black font-semibold mt-4">
+                                        frase de preferência
+                                    </p>
+
+                                    <div class="flex gap-3 mt-6 flex-wrap">
+
+                                        <span class="bg-green-100 text-turbg-turslok2 px-4 py-2 rounded-xl">
+                                            🌿 Ecoturismo
+                                        </span>
+
+                                        <span class="bg-green-100 text-turbg-turslok2 px-4 py-2 rounded-xl">
+                                            🚜 Agroturismo
+                                        </span>
+
+                                        <span class="bg-green-100 text-turbg-turslok2 px-4 py-2 rounded-xl">
+                                            🏕 Turismo Rural
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- ESTATÍSTICAS -->
+                            <div class="grid md:grid-cols-4 gap-5 mt-10">
+
+                                <div class="bg-gray-200 rounded-2xl p-5">
+                                    <p class="text-gray-500">Locais Cadastrados</p>
+                                    <h2 class="text-3xl font-bold text-black">48</h2>
+                                </div>
+
+                                <div class="bg-gray-200 rounded-2xl p-5">
+                                    <p class="text-gray-500">Visitantes</p>
+                                    <h2 class="text-3xl font-bold text-black">12K</h2>
+                                </div>
+
+                                <div class="bg-gray-200 rounded-2xl p-5">
+                                    <p class="text-gray-500">Avaliação</p>
+                                    <h2 class="text-3xl font-bold text-black">4.9 ★</h2>
+                                </div>
+
+                                <div class="bg-gray-200 rounded-2xl p-5">
+                                    <p class="text-gray-500">Experiências</p>
+                                    <h2 class="text-3xl font-bold text-black">95</h2>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- CADASTRAR PROPRIEDADE -->
+                    <div class="mt-10">
+
+                        <input type="checkbox" id="cadastro-propriedade" class="peer hidden">
+
+                        <label for="cadastro-propriedade"
+                            class="flex justify-between items-center bg-turslok1 text-white p-5 rounded-2xl cursor-pointer hover:bg-turslok2 transition-all">
+
+                            <div>
+                                <h2 class="text-2xl font-bold">
+                                    Cadastrar Propriedade
+                                </h2>
+
+                                <p class="text-sm text-gray-200">
+                                    Adicione ou edite informações da sua propriedade rural.
+                                </p>
+                            </div>
+
+                            <i class="fa-solid fa-chevron-down text-xl"></i>
+
+                        </label>
+
+                        <!-- FORMULÁRIO -->
+                        <div class="hidden peer-checked:block bg-gray-100 rounded-b-2xl p-4 md:p-8 shadow-inner">
+                            <div class="flex flex-col md:grid-cols-2 gap-6">
+
+                                <!-- Nome -->
+                                <div>
+                                    <label class="block font-semibold mb-2">
+                                        Nome da Propriedade
+                                    </label>
+
+                                    <input type="text" placeholder="Ex.: Fazenda Recanto Verde"
+                                        class="w-full max-w-full border rounded-xl p-3">
+                                </div>
+
+                                <!-- Categoria -->
+                                <div>
+                                    <label class="block font-semibold mb-2">
+                                        Categoria
+                                    </label>
+
+                                    <select class="w-full max-w-full border rounded-xl p-3">
+
+                                        <option>Agroturismo</option>
+                                        <option>Ecoturismo</option>
+                                        <option>Turismo Rural</option>
+                                        <option>Pesque e Pague</option>
+                                        <option>Hospedagem Rural</option>
+
+                                    </select>
+                                </div>
+
+                                <!-- Cidade -->
+                                <div>
+                                    <label class="block font-semibold mb-2">
+                                        Cidade
+                                    </label>
+
+                                    <input type="text" placeholder="Chapecó"
+                                        class="w-full max-w-full border rounded-xl p-3">
+                                </div>
+
+                                <!-- Estado -->
+                                <div>
+                                    <label class="block font-semibold mb-2">
+                                        Estado
+                                    </label>
+
+                                    <input type="text" placeholder="SC" class="w-full max-w-full border rounded-xl p-3">
+                                </div>
+
+                                <!-- Descrição -->
+                                <div class="md:col-span-2">
+
+                                    <label class=" font-semibold mb-2">
+                                        Descrição
+                                    </label>
+
+                                    <textarea rows="5" placeholder="Descreva sua propriedade..."
+                                        class="w-full max-w-full border rounded-xl p-3"></textarea>
+
+                                </div>
+
+                                <!-- Foto Principal -->
+                                <div>
+
+                                    <label class="block font-semibold mb-2">
+                                        Foto Principal
+                                    </label>
+
+                                    <input type="file" class="w-full max-w-full border rounded-xl p-3">
+
+                                </div>
+
+                                <!-- Capacidade -->
+                                <div>
+
+                                    <label class="block font-semibold mb-2">
+                                        Capacidade de Visitantes
+                                    </label>
+
+                                    <input type="number" placeholder="50"
+                                        class="w-full max-w-full border rounded-xl p-3">
+
+                                </div>
+
+                            </div>
+
+                            <!-- ATIVIDADES -->
+                            <div class="mt-8">
+
+                                <h3 class="text-xl font-bold mb-4">
+                                    Atividades Disponíveis
+                                </h3>
+
+                                <div class="grid md:grid-cols-3 gap-4">
+
+                                    <label class="bg-white p-3 rounded-xl border">
+                                        <input type="checkbox">
+                                        🌿 Trilhas
+                                    </label>
+
+                                    <label class="bg-white p-3 rounded-xl border">
+                                        <input type="checkbox">
+                                        🐎 Cavalgada
+                                    </label>
+
+                                    <label class="bg-white p-3 rounded-xl border">
+                                        <input type="checkbox">
+                                        🍞 Café Colonial
+                                    </label>
+
+                                    <label class="bg-white p-3 rounded-xl border">
+                                        <input type="checkbox">
+                                        🎣 Pesque e Pague
+                                    </label>
+
+                                    <label class="bg-white p-3 rounded-xl border">
+                                        <input type="checkbox">
+                                        🏡 Hospedagem
+                                    </label>
+
+                                    <label class="bg-white p-3 rounded-xl border">
+                                        <input type="checkbox">
+                                        🚜 Vivência Rural
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                            <!-- PREÇOS -->
+                            <div class="mt-8">
+
+                                <h3 class="text-xl font-bold mb-4">
+                                    Tabela de Preços
+                                </h3>
+
+                                <div class="grid md:grid-cols-2 gap-4">
+
+                                    <input type="text" placeholder="Visitação" class="border rounded-xl p-3">
+
+                                    <input type="number" placeholder="Valor" class="border rounded-xl p-3">
+
+                                    <input type="text" placeholder="Hospedagem" class="border rounded-xl p-3">
+
+                                    <input type="number" placeholder="Valor" class="border rounded-xl p-3">
+
+                                </div>
+                                <div class=" text-sm font-mono tracking-widest truncate m-2">
+                                    <i
+                                        class="fas fa-plus-circle hover:underline-offset-4 hover:underline cursor-pointer">
+                                        cadastrar outros </i>
+                                </div>
+
+                            </div>
+
+                            <!-- DONO -->
+                            <div class="mt-8">
+
+                                <h3 class="text-xl font-bold mb-4">
+                                    Informações do Proprietário
+                                </h3>
+
+                                <div class="grid md:grid-cols-2 gap-4">
+
+                                    <input type="text" placeholder="Nome do Proprietário" class="border rounded-xl p-3">
+
+                                    <input type="file" class="border rounded-xl p-3">
+
+                                </div>
+
+                                <textarea rows="4" placeholder="Conte a história do empreendimento..."
+                                    class="w-full max-w-full border rounded-xl p-3 mt-4"></textarea>
+
+                            </div>
+
+                            <!-- BOTÃO -->
+                            <div class="mt-8">
+
+                                <button
+                                    class="bg-turslok2 hover:bg-turslok3 text-white px-8 py-3 rounded-xl font-semibold">
+
+                                    Salvar Propriedade
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </section>
+                <!-- CONFIGURAÇÕES -->
+                <section class="tab-content config-content">
+
+                    <div class="bg-white rounded-3xl shadow-xl p-8">
+
+                        <h2 class="text-3xl font-bold text-turbg-turslok1 mb-8">
+                            Configurações
+                        </h2>
+
+                        <div class="flex flex-col gap-5">
+
+                            <input type="text" placeholder="Nome" class="border rounded-2xl p-4">
+
+                            <input type="email" placeholder="Email" class="border rounded-2xl p-4">
+
+                            <button class="bg-turslok2 hover:bg-turslok3 text-white px-6 py-3 rounded-2xl w-max">
+                                Salvar
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- SEGURANÇA -->
+                <section class="tab-content seg-content">
+
+                    <div class="bg-white rounded-3xl shadow-xl p-8">
+
+                        <h2 class="text-3xl font-bold text-turbg-turslok1 mb-8">
+                            Segurança
+                        </h2>
+
+                        <div class="flex flex-col gap-5">
+
+                            <input type="password" placeholder="Senha Atual" class="border rounded-2xl p-4">
+
+                            <input type="password" placeholder="Nova Senha" class="border rounded-2xl p-4">
+
+                            <button class="bg-turslok2 hover:bg-turslok3 text-white px-6 py-3 rounded-2xl w-max">
+                                Atualizar Senha
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- NOTIFICAÇÕES -->
+                <section class="tab-content not-content">
+
+                    <div class="bg-white rounded-3xl shadow-xl p-8">
+
+                        <h2 class="text-3xl font-bold text-turbg-turslok1 mb-8">
+                            Notificações
+                        </h2>
+
+                        <div class="space-y-4">
+
+                            <label class="flex justify-between bg-gray-200 p-4 rounded-xl">
+                                <span>Email de novidades</span>
+                                <input type="checkbox">
+                            </label>
+
+                            <label class="flex justify-between bg-gray-200 p-4 rounded-xl">
+                                <span>Alertas de segurança</span>
+                                <input type="checkbox" checked>
+                            </label>
+
+                            <label class="flex justify-between bg-gray-200 p-4 rounded-xl">
+                                <span>Promoções</span>
+                                <input type="checkbox">
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

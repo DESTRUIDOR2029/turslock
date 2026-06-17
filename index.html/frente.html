@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TURSLOCK</title>
+    <link rel="icon" href="/srcprojeto/img/icone.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/srcprojeto/css/output.css">
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <!-- navbar-->
+
+    <header class="bg-turslok1">
+        <nav class="flex justify-between items-center relative p-4">
+            <!-- quebra as div e espalha elas
+         justify-between faz com que elas sedividam nas pontas quer dizer que a div 
+         da logo fica no canto direito e a div dos links no canto esquerdo
+         -->
+            <div>
+                <div>
+                    <img src="/srcprojeto/img/logo.png" alt="" class="w-35 md:w-125px md:ml-10">
+                </div>
+            </div>
+            <div>
+                <input type="checkbox" id="menu_navbar" class="hidden peer">
+                <!-- peer: faz com que apareça um container que escnodia um menu de opções
+             precisando os checkbox precisam esatr em ordem e só precisa definir a tag 
+             de fechar, no caso só precisa a {tag peer-checked}: para que funcione por que
+              diz a pagina que "eu clique agora apareça o que está oculto"   -->
+
+                <label for="menu_navbar"
+                    class="text-white hover:bg-turslok3 rounded-4xl py-1  px-1 text-3xl cursor-pointer md:hidden">
+                    <i class="fas fa-bars md:hidden "></i>
+                </label>
+                <!-- escurece -->
+                <label class="fixed inset-0 bg-black/50 hidden z-1 peer-checked:block md:hidden "></label>
+
+                <!-- peer-checked:block (funciona quando o chackedbox está ativo) -->
+
+                <div class=" fixed h-screen md:h-auto top-0 right-0 w-[70vw] bg-turslok1 p-6 z-1 
+
+                        translate-x-full peer-checked:translate-x-0 transition-all duration-300 peer-checked:[&_.transparencia]:opacity-100
+
+                        md:static md:translate-x-0 md:w-auto md:bg-transparent md:p-0">
+
+                    <div class="flex justify-end md:hidden  border-b-2 border-white ">
+
+                        <label for="menu_navbar" class="text-white text-3xl cursor-pointer mb-3 ">
+                            <i class="fas fa-times md:hidden "></i>
+                        </label>
+
+                    </div>
+                    <ul
+                        class="flex flex-col md:flex-row space-y-4 md:space-y-0 mr-8 md:mt-0 mt-3 font-bold text-white text-base opacity-0 md:opacity-100 transparencia">
+                        <li class="hover:bg-emerald-700 px-4 rounded-xl">
+                            <a href="/index.html/paginainicial/filtro.html">Filtro</a>
+                        </li>
+                        <li class="hover:bg-emerald-700 px-4 rounded-xl">
+                            <a href="/index.html/paginainicial/suporte.html">Suporte</a>
+                        </li>
+                        <li class="hover:bg-emerald-700 px-4 rounded-xl">
+                            <a href="/index.html/paginainicial/cadastro.html">Cadastro</a>
+                        </li>
+                        <li class="hover:bg-emerald-700 px-4 rounded-xl">
+                            <a href="/index.html/paginainicial/login.html">Login</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!-- conteudo -->
+    <main class="md:grid  
+             bg-gradient-to-br from-turslok4 via-gray-300 to-teal-200">
+        <!-- barra de pesquisa -->
+        <div class="md:mt-20">
+            <div class="flex justify-center">
+                <a href="/index.html/frente.html">
+                    <img src="/srcprojeto/img/logo_verde.png" alt="turslock" class="mt-40 md:mt-0 md:w-100 w-60">
+                </a>
+            </div>
+            <div class="w-full">
+                <!-- barra de pesquisa -->
+                <div class="flex justify-center mb-7">
+                    <div class=" md:mt-10 mt-8 relative w-full md:w-150">
+                        <form action="paginainicial/filtro.html">
+                            <div class=" relative md:mr-0 mr-10 md:ml-0 ml-10">
+                                <input type="text" placeholder="Pesquisar destino"
+                                    class="border right-0 w-full md:w-150 p-2 rounded-3xl hover:outline-none focus:outline-none focus:ring-1 focus:ring-black hover:ring-1 hover:ring-black">
+                                <button type="submit"
+                                    class="absolute right-3 mt-1 w-8 p-1 rounded-full hover:bg-turslok3 "><i
+                                        class="fas fa-search"> </i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div>
+                    <!-- Container Principal dos slides -->
+                    <div class="relative w-full md:w-[600px] h-80 mx-auto overflow-hidden mb-7 px-4">
+
+                        <!--(linha que será animada) -->
+                        <div class="flex  h-full animate-carrossel hover:[animation-play-state:paused] ">
+
+                            <!-- Slide 1 -->
+                            <div class="w-full h-full shrink-0 flex flex-col">
+
+                                <div class="flex-1 flex items-start justify-center p-2 ">
+                                    <a href="/index.html/perfil/conteudo.html">
+                                        <img src="/srcprojeto/img/turismo-1.jpg" alt="Imagem 1"
+                                            class="w-87 h-full object-contain rounded-4xl shadow-lg shadow-black">
+                                    </a>
+                                </div>
+
+                                <div class="text-center text-black font-semibold py-2">
+                                    Fazenda Recanto Verde • Trilhas, hospedagem e gastronomia colonial.
+                                </div>
+
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="w-full h-full shrink-0 flex flex-col">
+
+                                <div class="flex-1 flex items-start justify-center p-2">
+                                    <a href="#">
+                                        <img src="/srcprojeto/img/turismo-2.jpg" alt="Imagem 2"
+                                            class="w-87 h-full object-contain rounded-4xl shadow-lg shadow-black">
+                                    </a>
+                                </div>
+
+                                <div class="text-center text-black font-semibold py-2">
+                                    Sítio Bela Vista • Experiências rurais e contato direto com a natureza.
+                                </div>
+
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="w-full h-full shrink-0 flex flex-col">
+
+                                <div class="flex-1 flex items-start justify-center p-2">
+                                    <a href="#">
+                                        <img src="/srcprojeto/img/turismo-3.jpg" alt="Imagem 3"
+                                            class="w-87 h-full object-contain rounded-4xl shadow-lg shadow-black">
+                                    </a>
+                                </div>
+
+                                <div class="text-center text-black font-semibold py-2">
+                                    Estância do Vale • Cavalgadas e paisagens inesquecíveis.
+                                </div>
+
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="w-full h-full shrink-0 flex flex-col">
+
+                                <div class="flex-1 flex items-start justify-center p-2">
+                                    <a href="#">
+                                        <img src="/srcprojeto/img/turismo-4.jpg" alt="Imagem 4"
+                                            class="w-87 h-full object-contain rounded-4xl shadow-lg shadow-black">
+                                    </a>
+                                </div>
+
+                                <div class="text-center text-black font-semibold py-2">
+                                    Recanto das Araucárias • Cultura, lazer e turismo familiar.
+                                </div>
+
+                            </div>
+
+                            <!-- Slide 5 -->
+                            <div class="w-full h-full shrink-0 flex flex-col">
+
+                                <div class="flex-1 flex items-start justify-center p-2">
+                                    <a href="#">
+                                        <img src="/srcprojeto/img/turismo-5.webp" alt="Imagem 5"
+                                            class="w-87 h-full object-contain rounded-4xl shadow-lg shadow-black">
+                                    </a>
+                                </div>
+
+                                <div class="text-center text-black font-semibold py-2">
+                                    Rancho do Horizonte • Hospedagem rural e aventura ao ar livre.
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+    </main>
+    <footer>
+        <div class="grid grid-cols-1 md:grid-cols-6 bg-turslok1 text-turslok5 p-4 md:p-6">
+            <div class="md:mr-10">
+                <a href="#">
+                    <img src="/srcprojeto/img/logo.png" alt="turslock" class="w-60">
+                </a>
+            </div>
+            <div class="md:col-span-1 pt-10 md:pt-0">
+                <h3 class="uppercase text-turslok4 font-bold text-xs tracking-widest mb-5">Empresa</h3>
+                <ul>
+                    <li class="mb-5">
+                        <a href="#">Sobre</a>
+                    </li>
+                    <li class="mb-5">
+                        <a href="#">For the Record</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="md:col-span-1 pt-10 md:pt-0">
+                <h3 class="uppercase text-turslok4 font-bold text-xs tracking-widest mb-5">comunidade</h3>
+                <ul>
+                    <li class="mb-5">
+                        <a href="#">Para usuarios</a>
+                    </li>
+                    <li class="mb-5">
+                        <a href="#">prestadores de serviço</a>
+                    </li>
+                    <li class="mb-5">
+                        <a href="#">Publicidade</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="md:col-span-1 pt-10 md:pt-0">
+                <h3 class="uppercase text-turslok4 font-bold text-xs tracking-widest mb-5">Links uteis</h3>
+                <ul>
+                    <li class="mb-5">
+                        <a href="#">Ajuda</a>
+                    </li>
+                    <li class="mb-5">
+                        <a href="#">Player da Web</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="md:col-span-2 pt-10">
+                <ul class="flex md:justify-end">
+                    <li
+                        class="flex items-center justify-center text-2xl bg-turslok2 w-12 h-12 rounded-full hover:bg-turslok3 hover:text-turslok5 transition-all duration-300 mx-2">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li
+                        class="flex items-center justify-center text-2xl bg-turslok2 w-12 h-12 rounded-full hover:bg-turslok3 hover:text-turslok5 transition-all duration-300 mx-2">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li
+                        class="flex items-center justify-center text-2xl bg-turslok2 w-12 h-12 rounded-full hover:bg-turslok3 hover:text-turslok5 transition-all duration-300 mx-2">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="md:col-span-4 md-20">
+                <ul>
+                    <li class="inline-block text-xs text-turslok4 mr-4 hover:text-turslok5 transition-all">
+                        <a href="#">Legal</a>
+                    </li>
+                    <li class="inline-block text-xs text-turslok4 mr-4 hover:text-turslok5 transition-all">
+                        <a href="#">Centro de Privacidade</a>
+                    </li>
+                    <li class="inline-block text-xs text-turslok4 mr-4 hover:text-turslok5 transition-all">
+                        <a href="#">Política de Privacidade</a>
+                    </li>
+                    <li class="inline-block text-xs text-turslok4 mr-4 hover:text-turslok5 transition-all">
+                        <a href="#">Cookies</a>
+                    </li>
+                    <li class="inline-block text-xs text-turslok4 mr-4 hover:text-turslok5 transition-all">
+                        <a href="#">Sobre anúncios</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="md:col-span-2 md:20">
+                <p class="flex justify-end text-turslok4 text-xs">&copy; 2026 turslock AB</p>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>

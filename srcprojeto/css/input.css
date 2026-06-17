@@ -1,0 +1,66 @@
+
+@import "tailwindcss";
+ /*@tailwindcss/cli -i srcprojeto/css/input.css -o srcprojeto/css/output.css -w*/
+@theme{
+    --color-turslok1: #1B4332;
+    --color-turslok2: #2D6A4F;
+    --color-turslok3: #40916C;
+    --color-turslok4: #74C69D;
+    --color-turslok5: #F8F9FA;
+    --spacing-125px: 125px;
+}
+@theme {
+  /* Configuração para o Tailwind v4 se aplicável */
+}
+/* checkbox */
+.tab-content{
+    display:none;
+}
+
+#perfil:checked ~ .container .perfil-content{
+    display:block;
+}
+
+#config:checked ~ .container .config-content{
+    display:block;
+}
+
+#seguranca:checked ~ .container .seg-content{
+    display:block;
+}
+
+#notificacoes:checked ~ .container .not-content{
+    display:block;
+}
+
+  #perfil:checked ~ .container .btn-perfil,
+  #config:checked ~ .container .btn-config,
+  #seguranca:checked ~ .container .btn-seg,
+  #notificacoes:checked ~ .container .btn-not{
+      background:#40916C;
+      transform:scale(1.05);
+}
+/* animação */
+@layer utilities {
+ .animate-carrossel {
+  animation: slider 25s infinite ease-in-out;
+}
+
+@keyframes slider {
+
+  /* Imagem 1 */
+  0%, 15% {transform: translateX(0%);}
+  /* Imagem 2 */
+  20%, 35% {transform: translateX(-100%);}
+  /* Imagem 3 */
+  40%, 55% {transform: translateX(-200%);}
+  /* Imagem 4 */
+  60%, 75% {
+    transform: translateX(-300%);}
+  /* Imagem 5 */
+  80%, 95% {
+    transform: translateX(-400%);}
+  /* Reinício */
+  100% {transform: translateX(0%);}
+  }
+}
