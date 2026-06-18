@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro</title>
+    <link rel="icon" href="../../turslock/srcprojeto/img/icone.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../turslock/srcprojeto/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="flex flex-col min-h-screen bg-gradient-to-br from-turslok4 via-gray-300 to-teal-200">
+    <header class="flex h-15 bg-turslok1 w-full">
+        <div class="flex flex-row-reverse place-content-center relative w-full">
+            <div class="flex items-center">
+                <a href="../../index.html">
+                    <img src="../../turslock/srcprojeto/img/logo.png" alt="turslock" class="w-35 md:w-125px">
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="flex flex-col justify-center mt-8">
+        <div class="absolute left-0 m-3 bg-turslok1 z-2">
+            <input type="checkbox" id="filtro" class="hidden peer">
+            <div class="peer md:w-[25vw] w-[60vw] fixed bg-turslok1 border-r border-white top-0 left-0 h-screen md:-translate-x-[80%] -translate-x-[80%] transition-all duration-300 peer-checked:translate-x-0 peer-checked:[&_.icone]:-rotate-90 peer-checked:[&_.borda]:border-b-2 peer-checked:[&_.transparencia]:opacity-100">
+                <label for="filtro" class="flex justify-between m-3 text-white text-4xl cursor-pointer">
+                    <div class="flex text-xl ml-4 font-semibold">FILTRO</div>
+                    <div class="transition-all icone duration-300"><i class="fas fa-bars"></i></div>
+                </label>
+                <div class="border-white m-4 borda transition-all duration-100"></div>
+                <div class="flex flex-col gap-2 opacity-0 transparencia transition-all transform duration-100">
+                    <form class="flex flex-col text-white gap-4">
+                        <div class="flex flex-col ml-5">
+                            <label>ESTADO:</label>
+                            <select class="w-min text-white bg-turslok2 rounded-lg border border-gray-400 px-3 py-2 focus:outline-none focus:bg-turslok3 hover:bg-turslok3">
+                                <option>Selecione</option>
+                                <option>Acre</option><option>Alagoas</option><option>Amapá</option>
+                                <option>Amazonas</option><option>Bahia</option><option>Ceará</option>
+                                <option>Distrito Federal</option><option>Espírito Santo</option>
+                                <option>Goiás</option><option>Maranhão</option><option>Mato Grosso</option>
+                                <option>Mato Grosso do Sul</option><option>Minas Gerais</option>
+                                <option>Pará</option><option>Paraíba</option><option>Paraná</option>
+                                <option>Pernambuco</option><option>Piauí</option>
+                                <option>Rio de Janeiro</option><option>Rio Grande do Norte</option>
+                                <option>Rio Grande do Sul</option><option>Rondônia</option>
+                                <option>Roraima</option><option>Santa Catarina</option>
+                                <option>São Paulo</option><option>Sergipe</option><option>Tocantins</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col ml-5 gap-2">
+                            <label>REGIÃO</label>
+                            <select class="w-min rounded-lg bg-turslok2 border border-gray-400 px-3 py-2 focus:outline-none focus:bg-turslok3 hover:bg-turslok3">
+                                <option>Selecione</option>
+                                <option>Norte</option><option>Sul</option>
+                                <option>Leste</option><option>Oeste</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col gap-2 ml-5">
+                            <div>CIDADE:</div>
+                            <input type="text" placeholder="Digite aqui"
+                                class="w-min bg-turslok2 rounded-lg border border-gray-400 px-3 py-2 focus:outline-none focus:bg-turslok3 hover:bg-turslok3">
+                        </div>
+                        <div class="flex flex-col ml-5 gap-2">
+                            <label>TIPO DE TURISMO</label>
+                            <select class="w-min rounded-lg bg-turslok2 border border-gray-400 px-3 py-2 focus:outline-none focus:bg-turslok3 hover:bg-turslok3">
+                                <option>Selecione</option>
+                                <option>Agroturismo</option><option>Turismo de Experiência</option>
+                                <option>Ecoturismo Rural</option><option>Turismo de Aventura</option>
+                                <option>Turismo Gastronômico</option><option>Bem-estar e Isolamento</option>
+                            </select>
+                        </div>
+                        <div class="flex place-content-center mt-5">
+                            <button type="submit" class="rounded-xl border-2 border-gray-100 bg-turslok3 hover:bg-turslok4 px-4 py-2">Aplicar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center z-0">
+            <div class="flex w-[50vw] justify-end items-center relative">
+                <input type="text" class="flex w-full absolute h-full py-5 px-3 border rounded-3xl hover:bg-turslok4 hover:outline-none focus:bg-turslok4 focus:outline-none" placeholder="Procure aqui">
+                <div class="relative flex items-center mx-2 p-1 px-1.5 rounded-4xl hover:bg-turslok3">
+                    <a href="#ativado"><i class="fas fa-search"></i></a>
+                </div>
+            </div>
+        </div>
+        <div id="ativado" class="hidden target:block max-w-5xl mx-auto mt-10 mb-20">
+            <h2 class="text-2xl font-bold text-turslok1 mb-6">Resultados Encontrados</h2>
+            <div class="grid gap-6">
+                <div class="bg-white rounded-xl shadow-md p-4 flex gap-4 hover:shadow-lg transition-all">
+                    <img src="../../turslock/srcprojeto/img/turismo-1.jpg" alt="Destino" class="w-40 h-28 object-cover rounded-lg">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold text-turslok1">Fazenda Recanto Verde</h3>
+                        <p class="text-gray-600 mt-2">Experiência de turismo rural com hospedagem, trilhas ecológicas e gastronomia típica.</p>
+                        <div class="mt-3 flex gap-2">
+                            <span class="bg-turslok4 text-turslok1 px-3 py-1 rounded-full text-sm">Agroturismo</span>
+                            <span class="bg-turslok4 text-turslok1 px-3 py-1 rounded-full text-sm">Ecoturismo</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <a href="../../turslock/perfil/conteudo.html" class="bg-turslok2 text-white px-4 py-2 rounded-lg hover:bg-turslok3 transition-all">Ver Mais</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-4 flex gap-4 hover:shadow-lg transition-all">
+                    <img src="../../turslock/srcprojeto/img/turismo-2.jpg" alt="Destino" class="w-40 h-28 object-cover rounded-lg">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold text-turslok1">Sítio Vale das Águas</h3>
+                        <p class="text-gray-600 mt-2">Passeios guiados, cachoeiras e atividades para toda a família.</p>
+                        <div class="mt-3 flex gap-2"><span class="bg-turslok4 text-turslok1 px-3 py-1 rounded-full text-sm">Turismo Rural</span></div>
+                    </div>
+                    <div class="flex items-center"><a href="#" class="bg-turslok2 text-white px-4 py-2 rounded-lg hover:bg-turslok3 transition-all">Ver Mais</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-4 flex gap-4 hover:shadow-lg transition-all">
+                    <img src="../../turslock/srcprojeto/img/turismo-3.jpg" alt="Destino" class="w-40 h-28 object-cover rounded-lg">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold text-turslok1">Pousada do Campo</h3>
+                        <p class="text-gray-600 mt-2">Passeios guiados, cachoeiras e atividades para toda a família.</p>
+                        <div class="mt-3 flex gap-2"><span class="bg-turslok4 text-turslok1 px-3 py-1 rounded-full text-sm">Turismo Rural</span></div>
+                    </div>
+                    <div class="flex items-center"><a href="#" class="bg-turslok2 text-white px-4 py-2 rounded-lg hover:bg-turslok3 transition-all">Ver Mais</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-4 flex gap-4 hover:shadow-lg transition-all">
+                    <img src="../../turslock/srcprojeto/img/turismo-4.jpg" alt="Destino" class="w-40 h-28 object-cover rounded-lg">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold text-turslok1">Sítio Encantado</h3>
+                        <p class="text-gray-600 mt-2">Gastronomia típica e lazer rural.</p>
+                        <div class="mt-3 flex gap-2"><span class="bg-turslok4 text-turslok1 px-3 py-1 rounded-full text-sm">Turismo Rural</span></div>
+                    </div>
+                    <div class="flex items-center"><a href="#" class="bg-turslok2 text-white px-4 py-2 rounded-lg hover:bg-turslok3 transition-all">Ver Mais</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-4 flex gap-4 hover:shadow-lg transition-all">
+                    <img src="../../turslock/srcprojeto/img/turismo-5.webp" alt="Destino" class="w-40 h-28 object-cover rounded-lg">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold text-turslok1">Rancho do Horizonte</h3>
+                        <p class="text-gray-600 mt-2">Hospedagem rural e aventura ao ar livre.</p>
+                        <div class="mt-3 flex gap-2"><span class="bg-turslok4 text-turslok1 px-3 py-1 rounded-full text-sm">Turismo Rural</span></div>
+                    </div>
+                    <div class="flex items-center"><a href="#" class="bg-turslok2 text-white px-4 py-2 rounded-lg hover:bg-turslok3 transition-all">Ver Mais</a></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
